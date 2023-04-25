@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from "react";
+import { Switch, Route , Link } from 'react-router-dom';
+import { Layouts, Typography, Space  } from 'antd'
+import './App.css'
+//below import gets all the components in one line to it effecient ang good looking
+import {Navbar} from './components' 
+
 
 function App() {
+  //const apikey = process.env.APIKEY // Assignig a variable to my apikey so that I can call the variable whereever needed by keeping my key protected
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="navbar">
+         <Navbar/>
+      </div>
+      <div className="main">
+
+      </div>
+      <div className="footer">
+
+      </div>
     </div>
   );
 }
 
 export default App;
+
+

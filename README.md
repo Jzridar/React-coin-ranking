@@ -1,3 +1,50 @@
+REACT-COIN-RANKING-PROJECT
+
+GIT Link: https://github.com/Jzridar/React-coin-ranking
+
+
+
+ABOUT: 
+
+#Created basic React app using Create-React-App.
+
+#Installed some dependencies like:
+1.Antdesign using " npm install antd @ant-design/icons"(link: https://ant.design/docs/react/introduce) for designing/styling
+2.Redux using "npm install react-redux @redux.js/toolkit"
+Redux using "npm install @redux.js/toolkit"
+3.Axios to make API requests using "npm install axios chart.js" to create charts
+4.Using "npm install html-react-parser" to parse some html data
+5.Using "npm install millify" to transform large numbers to readable string
+6.Using "npm install moment" to parse times and dates
+7.Using "npm install react-chartjs-2" to render the charts from chart js in our ract app
+
+TECHNOLOGIES USED:
+
+HOW I BUILT THIS:
+
+SPECIAL THANKS TO:
+Rapid API, 
+CoinRanking.com,
+https://www.youtube.com/watch?v=9DDX3US3kss.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
