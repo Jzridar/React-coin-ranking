@@ -4,7 +4,11 @@ GIT Link: https://github.com/Jzridar/React-coin-ranking
 
 
 
-ABOUT: 
+ABOUT: This project is created to fetch API data for cryptocoins.
+
+TECHNOLOGIES USED:HTML,JAVASCRIPT,CSS,REACT,API
+
+HOW I BUILT THIS:
 
 #Created basic React app using Create-React-App.
 
@@ -25,9 +29,29 @@ Redux using "npm install @redux.js/toolkit"
 
 7.Using "npm install react-chartjs-2" to render the charts from chart js in our ract app
 
-TECHNOLOGIES USED:
+STEPS:
+I have started by creating a basic index.html and index.js files.
 
-HOW I BUILT THIS:
+Next I have created 3 divs for navbar,main and footer to fetch the respective components later
+
+To differentiate the basic js files from components I've saved the components as ".jsx"
+
+I've created an index.js file to keep all the components inside and exported them to get imported in app.js.This way reduces considerable number of lines that we use to import components.Using this we can import any number of somponents in a single line
+
+
+Navbar component:
+
+Inside the navbar component I've added the logoimage and Added two icons inside the "antd menu component" and linked those two homepage and cryptocurrencies component.I've imported the Navbar component into app.js to put it inside the navbar div. 
+
+App.js file:
+
+After adding the Navabar in the App.js file,I've started creating the routes inside the main div using the layout component from antd.Inside that I have routed the homepage and the cryptocurrencies page
+
+In the footer section Ive added the link to homepage and the cryptocurrencies page for easy navigation
+
+
+
+
 
 SPECIAL THANKS TO:
 Rapid API, 
