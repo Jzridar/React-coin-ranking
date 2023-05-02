@@ -3,31 +3,30 @@ import axios from 'axios';
   //const apikey = process.env.APIKEY
 
 const BASE_URL =  'https://coinranking1.p.rapidapi.com/coins'
-const options = {
+// console.log(process.env.APIKEY)
+
+export const options = {
     method: 'GET',
+    url: 'https://coinranking1.p.rapidapi.com/coins',
     params: {
-        referenceCurrencyUuid: 'yhjMzLPhuIDl',
-        timePeriod: '24h',
-        'tiers[0]': '1',
-        orderBy: 'marketCap',
-        orderDirection: 'desc',
-        offset: '0'
+      referenceCurrencyUuid: 'yhjMzLPhuIDl',
+      timePeriod: '24h',
+      'tiers[0]': '1',
+      orderBy: 'marketCap',
+      orderDirection: 'desc',
+      limit: '50',
+      offset: '0'
     },
     headers: {
-        'content-type': 'application/octet-stream',
-        'X-RapidAPI-Key': 'f0021db587msh781fb1cbef39856p11c183jsn45521d5d1c85',
-        'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+      'content-type': 'application/octet-stream',
+      'X-RapidAPI-Key': '1d7e2ca5e1mshbee1bd6863b57b2p1fad59jsn429a088e0c79',
+      'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
     }
-};
+  };
 
-const getCryptos = async (count) => {
-    options.url = BASE_URL + `?limit=${count}`
-    const getResponse = axios.request(options)
-        .then((response) => {
-            console.log(response)
-            return response
-        })
-        .catch((err) => console.log(err));
+const getCryptos = async (count) => { //This method will return Promise<AxiosResponse<any, any>>
+    options.url = BASE_URL + `?limit=${count}`//Passing the limit as query string parameter
+    const getResponse = axios.request(options)//Call the API with options provided.
     return getResponse;
 };
 

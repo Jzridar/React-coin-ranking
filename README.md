@@ -43,11 +43,29 @@ Navbar component:
 
 Inside the navbar component I've added the logoimage and Added two icons inside the "antd menu component" and linked those two homepage and cryptocurrencies component.I've imported the Navbar component into app.js to put it inside the navbar div. 
 
+Homepage component:
+
+In the homepage i'm fetching data inside the use effect on the component render. getting the cpoin stats and setting it to worldwidecryptostats and displaying them using rows,columns and millify,also calling the cryptocurrencies component to display the top 10 cryptos in the homepage by giving a property called simplified for the cryptocurrency component
+also I'm giving an options to look for more than 10 coins by linking cryptocurrencies component to the showmore title
+
+Cryptocurrency Component: 
+
+Here i'm fetching data inside the use effect on the page load or when the searchterm value change.one use state for coins and another one is for search coin by its name.I'm checking if simplified is true to load 10 records if not it will display 100 records.
+The searchterm input box takes the user input and update the setsearchterm usestate method to update the searchterm state,this will trigger the use effect method to filter the coins that cointains the search letters and call the setCoins function to update new coins state.
+
+
+cryptoApi.js:
+
+Here's where I'm fetching the data using the API endpoint code given in the coin ranking website by using the axios library inside the getcrypto method.This will return the axios response object as a promise
+
 App.js file:
 
 After adding the Navabar in the App.js file,I've started creating the routes inside the main div using the layout component from antd.Inside that I have routed the homepage and the cryptocurrencies page
 
 In the footer section Ive added the link to homepage and the cryptocurrencies page for easy navigation
+
+App.css
+Did some basic designing.
 
 
 

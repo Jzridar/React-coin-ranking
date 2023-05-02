@@ -5,23 +5,26 @@ import React, { useEffect, useState } from 'react';
 import getCryptos from '../services/cryptoApi';
 
 
-export default function Cryptocurrencies({ simplified }) {
+export default function Cryptocurrencies({ simplified }) {//Take one property to decide coin count to fetch
   const [coins, setCoins] = useState();
   const [searchTerm, setSearchTerm] = useState('');
   const count = simplified ? 10 : 100
 
   useEffect(() => {
-    
+    //This block will be executed in two scenarios:
+    // 1. On component render 
+    //2.Whenever the searchTerm value changes
+
     if (searchTerm) {
-      const filteredData = coins.filter((item) => item.name.toLowerCase().includes(searchTerm));
+      const filteredData = coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm));
       setCoins(filteredData);
       return
     }
 
-    getCryptos(count).then((res) => {
-      console.log(res?.data?.data?.coins)
-      setCoins(res?.data?.data?.coins);
-      
+    getCryptos(count).then((response) => {
+      console.log(response)
+      console.log(response?.data?.data?.coins)
+      setCoins(response?.data?.data?.coins);
     })
   }, [searchTerm]);
 
@@ -36,6 +39,8 @@ export default function Cryptocurrencies({ simplified }) {
           />
         </div>
       )}
+
+      {/* Using the grid property called gutter, spacing the cards vertically and horizontally */}
       <Row gutter={[32, 32]} className="crypto-card-container">
         {coins?.map((currency) => (
           <Col
@@ -45,8 +50,6 @@ export default function Cryptocurrencies({ simplified }) {
             className="crypto-card"
             key={currency.uuid}
           >
-
-            {/* Note: Change currency.id to currency.uuid  */}
             <Link key={currency.uuid} >
               <Card
                 title={`${currency.rank}. ${currency.name}`}
