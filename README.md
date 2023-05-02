@@ -1,37 +1,41 @@
-REACT-COIN-RANKING-PROJECT
+# REACT-COIN-RANKING-PROJECT 
 
-GIT Link: https://github.com/Jzridar/React-coin-ranking
+[GIT Link](https://github.com/Jzridar/React-coin-ranking)
 
-LIVE Link:https://coin-ranking-jzridar.onrender.com
+[LIVE Link](https://coin-ranking-jzridar.onrender.com)
 
 
 
-ABOUT: This project is created to fetch API data for cryptocoins.
+**ABOUT:** 
 
-TECHNOLOGIES USED:HTML,JAVASCRIPT,CSS,REACT,API
+This project is created to fetch API data for cryptocoins.
 
-HOW I BUILT THIS:
+**TECHNOLOGIES USED:**
+
+HTML,JAVASCRIPT,CSS,REACT,API
+
+**HOW I BUILT THIS:**
 
 #Created basic React app using Create-React-App.
 
-#Installed some dependencies like:
+**Installed some dependencies like:**
 
-1.Antdesign using " npm install antd @ant-design/icons"(link: https://ant.design/docs/react/introduce) for designing/styling
+1. Antdesign using " npm install antd @ant-design/icons"[link](https://ant.design/docs/react/introduce) for designing/styling
 
-2.Redux using "npm install react-redux @redux.js/toolkit"
+2. Redux using "npm install react-redux @redux.js/toolkit"
 Redux using "npm install @redux.js/toolkit"
 
-3.Axios to make API requests using "npm install axios chart.js" to create charts
+3. Axios to make API requests using "npm install axios chart.js" to create charts
 
-4.Using "npm install html-react-parser" to parse some html data
+4. Using "npm install html-react-parser" to parse some html data
 
-5.Using "npm install millify" to transform large numbers to readable string
+5. Using "npm install millify" to transform large numbers to readable string
 
-6.Using "npm install moment" to parse times and dates
+6. Using "npm install moment" to parse times and dates
 
-7.Using "npm install react-chartjs-2" to render the charts from chart js in our ract app
+7. Using "npm install react-chartjs-2" to render the charts from chart js in our ract app
 
-STEPS:
+**STEPS:**
 
 I have started by creating a basic index.html and index.js files.
 
@@ -42,32 +46,32 @@ To differentiate the basic js files from components I've saved the components as
 I've created an index.js file to keep all the components inside and exported them to get imported in app.js.This way reduces considerable number of lines that we use to import components.Using this we can import any number of somponents in a single line
 
 
-Navbar component:
+**Navbar component:**
 
 Inside the navbar component I've added the logoimage and Added two icons inside the "antd menu component" and linked those two homepage and cryptocurrencies component.I've imported the Navbar component into app.js to put it inside the navbar div. 
 
-Homepage component:
+**Homepage component:**
 
 In the homepage i'm fetching data inside the use effect on the component render. getting the cpoin stats and setting it to worldwidecryptostats and displaying them using rows,columns and millify,also calling the cryptocurrencies component to display the top 10 cryptos in the homepage by giving a property called simplified for the cryptocurrency component
 also I'm giving an options to look for more than 10 coins by linking cryptocurrencies component to the showmore title
 
-Cryptocurrency Component: 
+**Cryptocurrency Component:** 
 
 Here i'm fetching data inside the use effect on the page load or when the searchterm value change.one use state for coins and another one is for search coin by its name.I'm checking if simplified is true to load 10 records if not it will display 100 records.
 The searchterm input box takes the user input and update the setsearchterm usestate method to update the searchterm state,this will trigger the use effect method to filter the coins that cointains the search letters and call the setCoins function to update new coins state.Using the row and column property I'm displaying the cards by mapping them.Linking wach card by their id and by using the card component from ant d displaying the currency details on each cards
 
 
-cryptoApi.js:
+**cryptoApi.js:**
 
 Here's where I'm fetching the data using the API endpoint code given in the coin ranking website by using the axios library inside the getcrypto method.This will return the axios response object as a promise
 
-App.js file:
+**App.js file:**
 
 After adding the Navabar in the App.js file,I've started creating the routes inside the main div using the layout component from antd.Inside that I have routed the homepage and the cryptocurrencies page
 
 In the footer section Ive added the link to homepage and the cryptocurrencies page for easy navigation
 
-App.css,Ant-design:
+**App.css,Ant-design:**
 Main designs are done using ant-design components ,Did some basic designing using CSS.
 
 
@@ -76,8 +80,8 @@ Main designs are done using ant-design components ,Did some basic designing usin
 
 SPECIAL THANKS TO:
 Rapid API, 
-CoinRanking.com,
-https://www.youtube.com/watch?v=9DDX3US3kss.
+[CoinRanking.com](https://rapidapi.com/Coinranking/api/coinranking1/details),
+[Youtube](https://www.youtube.com/watch?v=9DDX3US3kss)
 
 
 
