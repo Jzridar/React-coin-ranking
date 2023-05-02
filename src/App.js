@@ -20,9 +20,8 @@ function App() {
         <Layout>
         <div className="routes">
         <Routes>
-                {/* Exact path means its going to trigger only if its exactly the same URL */}
                   <Route path="/home" element={<Homepage />}/>
-                  <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />} />
+                  <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
           </Routes>
       
         </div>
@@ -30,12 +29,14 @@ function App() {
 
 
         <div className="footer">
+
+          {/* Typography component used when need to display a title or paragraph contents in Articles/Blogs/Notes */}
           <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
             CryptoRanking <br />
             Thanks for visiting!
           </Typography.Title>
 
-          {/* space is the ant design way of saying div tag */}
+          {/* space component is to give space between the links */}
           <Space>
             <Link to='/home'>Home </Link>
             <Link to='/cryptocurrencies'>Cryptocurrencies</Link>

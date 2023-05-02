@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-//This package is used to format numbers
+//This package is used to format long numbers to readable ones
 import millify from 'millify'
+//Statistic component used when want to display statistic data with description
 import { Typography, Row, Col, Statistic } from 'antd'
 import { Link } from 'react-router-dom';
 import getCryptos from '../services/cryptoApi';

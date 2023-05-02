@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import getCryptos from '../services/cryptoApi';
 
 
-export default function Cryptocurrencies({ simplified }) {//Take one property to decide coin count to fetch
+export default function Cryptocurrencies({ simplified }) { 
   const [coins, setCoins] = useState();
   const [searchTerm, setSearchTerm] = useState('');
   const count = simplified ? 10 : 100
@@ -43,14 +43,16 @@ export default function Cryptocurrencies({ simplified }) {//Take one property to
       {/* Using the grid property called gutter, spacing the cards vertically and horizontally */}
       <Row gutter={[32, 32]} className="crypto-card-container">
         {coins?.map((currency) => (
-          <Col
+          <Col     //xs,sm,lg are the properties of column in ant-design,giving the card size for depending on the screensize
             xs={24}
             sm={12}
             lg={6}
             className="crypto-card"
             key={currency.uuid}
           >
-            <Link key={currency.uuid} >
+
+            {/* uuid-> this is how it display the id ein the console */}
+            <Link key={currency.uuid} > 
               <Card
                 title={`${currency.rank}. ${currency.name}`}
                 extra={<img className="crypto-image" src={currency.iconUrl} />}

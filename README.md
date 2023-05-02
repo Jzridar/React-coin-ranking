@@ -2,6 +2,8 @@ REACT-COIN-RANKING-PROJECT
 
 GIT Link: https://github.com/Jzridar/React-coin-ranking
 
+LIVE Link:https://coin-ranking-jzridar.onrender.com
+
 
 
 ABOUT: This project is created to fetch API data for cryptocoins.
@@ -30,6 +32,7 @@ Redux using "npm install @redux.js/toolkit"
 7.Using "npm install react-chartjs-2" to render the charts from chart js in our ract app
 
 STEPS:
+
 I have started by creating a basic index.html and index.js files.
 
 Next I have created 3 divs for navbar,main and footer to fetch the respective components later
@@ -51,7 +54,7 @@ also I'm giving an options to look for more than 10 coins by linking cryptocurre
 Cryptocurrency Component: 
 
 Here i'm fetching data inside the use effect on the page load or when the searchterm value change.one use state for coins and another one is for search coin by its name.I'm checking if simplified is true to load 10 records if not it will display 100 records.
-The searchterm input box takes the user input and update the setsearchterm usestate method to update the searchterm state,this will trigger the use effect method to filter the coins that cointains the search letters and call the setCoins function to update new coins state.
+The searchterm input box takes the user input and update the setsearchterm usestate method to update the searchterm state,this will trigger the use effect method to filter the coins that cointains the search letters and call the setCoins function to update new coins state.Using the row and column property I'm displaying the cards by mapping them.Linking wach card by their id and by using the card component from ant d displaying the currency details on each cards
 
 
 cryptoApi.js:
@@ -64,8 +67,8 @@ After adding the Navabar in the App.js file,I've started creating the routes ins
 
 In the footer section Ive added the link to homepage and the cryptocurrencies page for easy navigation
 
-App.css
-Did some basic designing.
+App.css,Ant-design:
+Main designs are done using ant-design components ,Did some basic designing using CSS.
 
 
 

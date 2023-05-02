@@ -1,5 +1,4 @@
 //To differentiate react componencts from .js files,I've saved all the components as .jsx files
-import React,{useEffect,useState} from 'react'
 // antdesign is a design system for enterprise level products
 import { Button, Menu, Typography, Avatar } from 'antd'
 
